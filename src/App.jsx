@@ -7,7 +7,9 @@ function App() {
 		<>
 			<div className="container">
 				<UserComponent />
-				<CardComponent />
+				<div>
+					<CardComponent />
+				</div>
 			</div>
 		</>
 	);
