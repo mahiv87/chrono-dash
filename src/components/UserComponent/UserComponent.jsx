@@ -15,13 +15,13 @@ function UserComponent() {
 				</div>
 			</div>
 			<div className={styles.periodic}>
+				<p>Daily</p>
 				<p
 					className={isActive ? styles.active : ''}
 					onClick={() => setIsActive(!isActive)}
 				>
-					Daily
+					Weekly
 				</p>
-				<p>Weekly</p>
 				<p>Monthly</p>
 			</div>
 		</div>
