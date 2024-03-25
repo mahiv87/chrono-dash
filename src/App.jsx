@@ -5,8 +5,10 @@ import CardComponent from './components/CardComponent/CardComponent';
 function App() {
 	return (
 		<>
-			<UserComponent />
-			<CardComponent />
+			<div className="container">
+				<UserComponent />
+				<CardComponent />
+			</div>
 		</>
 	);
 }
