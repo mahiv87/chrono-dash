@@ -3,7 +3,7 @@ import avatar from '../../images/image-jeremy.png';
 
 function UserComponent() {
 	return (
-		<div>
+		<div className={styles.container}>
 			<img src={avatar} alt="User avatar" className={styles.avatar} />
 			<p>Report for</p>
 			<p>Jeremy Robson</p>

@@ -1,4 +1,10 @@
+.container {
+	background: hsl(235, 46%, 20%);
+	border-radius: 0.7rem;
+}
+
 .avatar {
+	scale: 0.4;
 	border: 8px solid white;
 	border-radius: 50%;
 }
