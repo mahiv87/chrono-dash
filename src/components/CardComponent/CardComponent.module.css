@@ -1,0 +1,15 @@
+.container {
+	/* display: flex;
+	flex-direction: column; */
+	width: 275px;
+	background-color: hsl(15, 100%, 70%);
+	border-radius: 0.7rem;
+}
+
+.icon {
+}
+
+.activityInfo {
+	background-color: hsl(235, 46%, 20%);
+	border-radius: 0.7rem;
+}

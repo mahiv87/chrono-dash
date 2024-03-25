@@ -3,7 +3,7 @@ import avatar from '../../images/image-jeremy.png';
 import { useState } from 'react';
 
 function UserComponent() {
-	const [isActive, setIsActive] = useState(false);
+	const [isActive, setIsActive] = useState(true);
 
 	return (
 		<div className={styles.container}>
