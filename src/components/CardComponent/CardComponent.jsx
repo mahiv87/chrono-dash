@@ -5,7 +5,9 @@ import elipsis from '../../images/icon-ellipsis.svg';
 function CardComponent() {
 	return (
 		<div className={styles.container}>
-			<img src={icon} alt="icon" className={styles.icon} />
+			<div className={styles.imageContainer}>
+				<img src={icon} alt="icon" className={styles.icon} />
+			</div>
 			<div className={styles.activityInfo}>
 				<div className={styles.header}>
 					<p className={styles.title}>Work</p>

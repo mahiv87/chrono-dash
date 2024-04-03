@@ -6,7 +6,16 @@
 	border-radius: 0.7rem;
 }
 
+.imageContainer {
+	display: flex;
+	justify-content: end;
+	overflow: hidden;
+}
+
 .icon {
+	position: relative;
+	top: -7px;
+	right: 10px;
 }
 
 .activityInfo {
