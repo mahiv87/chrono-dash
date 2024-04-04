@@ -15,8 +15,10 @@ function CardComponent() {
 						<img src={elipsis} alt="elipsis" className={styles.elipsis} />
 					</a>
 				</div>
-				<p className={styles.time}>32hrs</p>
-				<p className={styles.previous}>Last Week - 36hrs</p>
+				<div className={styles.timeContainer}>
+					<p className={styles.time}>32hrs</p>
+					<p className={styles.previous}>Last Week - 36hrs</p>
+				</div>
 			</div>
 		</div>
 	);

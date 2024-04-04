@@ -24,6 +24,7 @@
 .activityInfo {
 	background-color: hsl(235, 46%, 20%);
 	border-radius: 0.7rem;
+	padding: 1rem;
 }
 
 .header {
@@ -35,4 +36,21 @@
 
 .title {
 	font-weight: 600;
+}
+
+.timeContainer {
+	display: flex;
+	flex-direction: column;
+	padding: 0rem 1.2rem;
+}
+
+.time {
+	font-size: 64px;
+	margin: 0;
+}
+
+.previous {
+	margin: 0;
+	color: hsl(235, 45%, 61%);
+	font-weight: 400;
 }
