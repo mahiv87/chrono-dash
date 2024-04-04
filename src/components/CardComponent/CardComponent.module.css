@@ -10,15 +10,29 @@
 	display: flex;
 	justify-content: end;
 	overflow: hidden;
+	height: 50px;
 }
 
 .icon {
 	position: relative;
 	top: -7px;
 	right: 10px;
+	width: 80px;
+	height: 80px;
 }
 
 .activityInfo {
 	background-color: hsl(235, 46%, 20%);
 	border-radius: 0.7rem;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0rem 1.2rem;
+}
+
+.title {
+	font-weight: 600;
 }
