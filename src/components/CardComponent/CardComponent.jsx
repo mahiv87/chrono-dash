@@ -9,7 +9,16 @@ import socialIcon from '../../images/icon-social.svg';
 import selfIcon from '../../images/icon-self-care.svg';
 import elipsis from '../../images/icon-ellipsis.svg';
 
-function CardComponent({ color, title, time, previous }) {
+function CardComponent({
+	color,
+	title,
+	daily,
+	dailyPrev,
+	weekly,
+	weeklyPrev,
+	monthly,
+	monthlyPrev
+}) {
 	const handleIcon = (name) => {
 		switch (name) {
 			case 'Work':
@@ -42,8 +51,8 @@ function CardComponent({ color, title, time, previous }) {
 					</a>
 				</div>
 				<div className={styles.timeContainer}>
-					<p className={styles.time}>{time}hrs</p>
-					<p className={styles.previous}>Last Week - {previous}hrs</p>
+					<p className={styles.time}>{weekly}hrs</p>
+					<p className={styles.previous}>Last Week - {weeklyPrev}hrs</p>
 				</div>
 			</div>
 		</div>
@@ -53,8 +62,12 @@ function CardComponent({ color, title, time, previous }) {
 CardComponent.propTypes = {
 	color: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
-	time: PropTypes.number.isRequired,
-	previous: PropTypes.number.isRequired
+	daily: PropTypes.number.isRequired,
+	dailyPrev: PropTypes.number.isRequired,
+	weekly: PropTypes.number.isRequired,
+	weeklyPrev: PropTypes.number.isRequired,
+	monthly: PropTypes.number.isRequired,
+	monthlyPrev: PropTypes.number.isRequired
 };
 
 export default CardComponent;

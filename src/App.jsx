@@ -14,8 +14,12 @@ function App() {
 							<CardComponent
 								color={activity.color}
 								title={activity.title}
-								time={activity.timeframes.weekly.current}
-								previous={activity.timeframes.weekly.previous}
+								daily={activity.timeframes.daily.current}
+								dailyPrev={activity.timeframes.daily.previous}
+								weekly={activity.timeframes.weekly.current}
+								weeklyPrev={activity.timeframes.weekly.previous}
+								monthly={activity.timeframes.monthly.current}
+								monthlyPrev={activity.timeframes.monthly.previous}
 								key={activity.title}
 							/>
 						))}
