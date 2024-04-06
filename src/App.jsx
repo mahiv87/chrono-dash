@@ -12,17 +12,13 @@ function App() {
 					{data &&
 						data.map((activity) => (
 							<CardComponent
+								color={activity.color}
 								title={activity.title}
 								time={activity.timeframes.weekly.current}
 								previous={activity.timeframes.weekly.previous}
+								key={activity.title}
 							/>
 						))}
-					{/* <CardComponent />
-					<CardComponent />
-					<CardComponent />
-					<CardComponent />
-					<CardComponent />
-					<CardComponent /> */}
 				</div>
 			</div>
 		</>
