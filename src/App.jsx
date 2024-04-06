@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './App.css';
 import UserComponent from './components/UserComponent/UserComponent';
@@ -6,8 +6,16 @@ import CardComponent from './components/CardComponent/CardComponent';
 import data from './db/data.json';
 
 function App() {
-	const [activeItem, setActiveItem] = useState(1);
+	const [activeItem, setActiveItem] = useState(null);
 
+	useEffect(() => {
+		const storedActiveItem = localStorage.getItem('period');
+		if (storedActiveItem !== null) {
+			setActiveItem(parseInt(storedActiveItem));
+		}
+	}, [activeItem]);
+
+	console.log(activeItem);
 	return (
 		<>
 			<div className="container">
@@ -16,7 +24,7 @@ function App() {
 					{data &&
 						data.map((activity) => (
 							<CardComponent
-								period={activeItem}
+								periodic={activeItem}
 								color={activity.color}
 								title={activity.title}
 								daily={activity.timeframes.daily.current}
