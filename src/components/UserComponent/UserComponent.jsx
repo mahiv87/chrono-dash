@@ -21,9 +21,6 @@ function UserComponent() {
 			</div>
 			<ul className={styles.periodic}>
 				<li
-					// style={{
-					// 	color: activeItem === 0 ? 'white' : ''
-					// }}
 					className={
 						activeItem === 0 ? `${styles.item} ${styles.active}` : styles.item
 					}
@@ -53,5 +50,3 @@ function UserComponent() {
 }
 
 export default UserComponent;
-
-// className={activeItem === 0 ? styles.active : ''} onClick={() => handleClick(0)}
