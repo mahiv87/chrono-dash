@@ -7,7 +7,7 @@ function App() {
 		<>
 			<div className="container">
 				<UserComponent />
-				<div>
+				<div className="cardsContainer">
 					<CardComponent />
 				</div>
 			</div>
