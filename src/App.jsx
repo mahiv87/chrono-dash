@@ -9,6 +9,11 @@ function App() {
 				<UserComponent />
 				<div className="cardsContainer">
 					<CardComponent />
+					<CardComponent />
+					<CardComponent />
+					<CardComponent />
+					<CardComponent />
+					<CardComponent />
 				</div>
 			</div>
 		</>

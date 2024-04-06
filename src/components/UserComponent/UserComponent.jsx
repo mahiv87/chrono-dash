@@ -14,18 +14,16 @@ function UserComponent() {
 					<p className={styles.name}>Jeremy Robson</p>
 				</div>
 			</div>
-			<div className={styles.periodic}>
-				<p>Daily</p>
-				<p
-					className={isActive ? styles.active : ''}
-					onClick={() => setIsActive(!isActive)}
-				>
-					Weekly
-				</p>
-				<p>Monthly</p>
-			</div>
+			<ul className={styles.periodic}>
+				<li>Daily</li>
+				<li>Weekly</li>
+				<li>Monthly</li>
+			</ul>
 		</div>
 	);
 }
 
 export default UserComponent;
+
+// className={isActive ? styles.active : ''}
+// 					onClick={() => setIsActive(!isActive)}
