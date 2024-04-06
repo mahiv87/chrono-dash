@@ -21,28 +21,28 @@ function UserComponent() {
 			</div>
 			<ul className={styles.periodic}>
 				<li
-					style={{
-						color: activeItem === 0 ? 'white' : ''
-					}}
-					className={styles.item}
+					// style={{
+					// 	color: activeItem === 0 ? 'white' : ''
+					// }}
+					className={
+						activeItem === 0 ? `${styles.item} ${styles.active}` : styles.item
+					}
 					onClick={() => handleClick(0)}
 				>
 					Daily
 				</li>
 				<li
-					style={{
-						color: activeItem === 1 ? 'white' : ''
-					}}
-					className={styles.item}
+					className={
+						activeItem === 1 ? `${styles.item} ${styles.active}` : styles.item
+					}
 					onClick={() => handleClick(1)}
 				>
 					Weekly
 				</li>
 				<li
-					style={{
-						color: activeItem === 2 ? 'white' : ''
-					}}
-					className={styles.item}
+					className={
+						activeItem === 2 ? `${styles.item} ${styles.active}` : styles.item
+					}
 					onClick={() => handleClick(2)}
 				>
 					Monthly
@@ -54,5 +54,4 @@ function UserComponent() {
 
 export default UserComponent;
 
-// className={isActive ? styles.active : ''}
-// 					onClick={() => setIsActive(!isActive)}
+// className={activeItem === 0 ? styles.active : ''} onClick={() => handleClick(0)}
