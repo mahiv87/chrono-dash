@@ -1,7 +1,7 @@
 .container {
 	/* display: flex;
 	flex-direction: column; */
-	width: 275px;
+	width: 17.188rem;
 	background-color: hsl(15, 100%, 70%);
 	border-radius: 0.7rem;
 }
@@ -10,15 +10,15 @@
 	display: flex;
 	justify-content: end;
 	overflow: hidden;
-	height: 50px;
+	height: 3.125rem;
 }
 
 .icon {
 	position: relative;
-	top: -7px;
-	right: 10px;
-	width: 80px;
-	height: 80px;
+	top: -0.438rem;
+	right: 0.625rem;
+	width: 5rem;
+	height: 5rem;
 }
 
 .activityInfo {
@@ -41,7 +41,7 @@
 .timeContainer {
 	display: flex;
 	flex-direction: column;
-	padding: 0rem 1.2rem;
+	padding: 1rem 1.2rem;
 }
 
 .time {
