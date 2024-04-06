@@ -35,7 +35,7 @@
 	padding: 1rem;
 }
 
-.periodic li {
+.item {
 	list-style: none;
 	width: 3.125rem;
 	color: hsl(235, 45%, 61%);
@@ -45,10 +45,10 @@
 	transition: all 150ms ease-in-out;
 }
 
-.periodic li:hover {
+.item:hover {
 	color: white;
 }
 
-.periodic li:focus {
+.active {
 	color: white;
 }

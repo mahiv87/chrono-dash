@@ -1,9 +1,14 @@
-import styles from '../UserComponent/UserComponent.module.css';
-import avatar from '../../images/image-jeremy.png';
 import { useState } from 'react';
 
+import styles from '../UserComponent/UserComponent.module.css';
+import avatar from '../../images/image-jeremy.png';
+
 function UserComponent() {
-	const [isActive, setIsActive] = useState(true);
+	const [activeItem, setActiveItem] = useState(null);
+
+	const handleClick = (index) => {
+		setActiveItem(index);
+	};
 
 	return (
 		<div className={styles.container}>
@@ -15,9 +20,33 @@ function UserComponent() {
 				</div>
 			</div>
 			<ul className={styles.periodic}>
-				<li>Daily</li>
-				<li>Weekly</li>
-				<li>Monthly</li>
+				<li
+					style={{
+						color: activeItem === 0 ? 'white' : ''
+					}}
+					className={styles.item}
+					onClick={() => handleClick(0)}
+				>
+					Daily
+				</li>
+				<li
+					style={{
+						color: activeItem === 1 ? 'white' : ''
+					}}
+					className={styles.item}
+					onClick={() => handleClick(1)}
+				>
+					Weekly
+				</li>
+				<li
+					style={{
+						color: activeItem === 2 ? 'white' : ''
+					}}
+					className={styles.item}
+					onClick={() => handleClick(2)}
+				>
+					Monthly
+				</li>
 			</ul>
 		</div>
 	);
