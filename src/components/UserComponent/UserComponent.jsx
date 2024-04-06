@@ -4,19 +4,21 @@ import styles from '../UserComponent/UserComponent.module.css';
 import avatar from '../../images/image-jeremy.png';
 
 function UserComponent() {
-	const [activeItem, setActiveItem] = useState(() => {
-		const storedActiveItem = localStorage.getItem('period');
-		return storedActiveItem !== null ? parseInt(storedActiveItem) : null;
-	});
+	// const [activeItem, setActiveItem] = useState(() => {
+	// 	const storedActiveItem = localStorage.getItem('period');
+	// 	return storedActiveItem !== null ? parseInt(storedActiveItem) : null;
+	// });
+	const [activeItem, setActiveItem] = useState(1);
 
 	const handleClick = (index) => {
 		setActiveItem(index);
-		console.log(index);
+		// console.log(index);
+		localStorage.setItem('period', index.toString());
 	};
 
-	useEffect(() => {
-		localStorage.setItem('period', activeItem);
-	}, [activeItem]);
+	// useEffect(() => {
+	// 	localStorage.setItem('period', activeItem);
+	// }, [activeItem]);
 
 	return (
 		<div className={styles.container}>

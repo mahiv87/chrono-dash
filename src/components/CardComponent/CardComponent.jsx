@@ -21,7 +21,7 @@ function CardComponent({
 	monthly,
 	monthlyPrev
 }) {
-	const [activeItem, setActiveItem] = useState(null);
+	const [activeItem, setActiveItem] = useState(1);
 
 	const handleIcon = (name) => {
 		switch (name) {
@@ -48,6 +48,8 @@ function CardComponent({
 			setActiveItem(parseInt(storedActiveItem));
 		}
 	}, []);
+
+	console.log(activeItem);
 
 	return (
 		<div style={{ backgroundColor: `${color}` }} className={styles.container}>
