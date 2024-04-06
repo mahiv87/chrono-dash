@@ -1,17 +1,22 @@
+import { useState } from 'react';
+
 import './App.css';
 import UserComponent from './components/UserComponent/UserComponent';
 import CardComponent from './components/CardComponent/CardComponent';
 import data from './db/data.json';
 
 function App() {
+	const [activeItem, setActiveItem] = useState(1);
+
 	return (
 		<>
 			<div className="container">
-				<UserComponent />
+				<UserComponent setActiveItem={setActiveItem} />
 				<div className="cardsContainer">
 					{data &&
 						data.map((activity) => (
 							<CardComponent
+								period={activeItem}
 								color={activity.color}
 								title={activity.title}
 								daily={activity.timeframes.daily.current}

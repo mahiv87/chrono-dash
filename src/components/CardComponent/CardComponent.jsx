@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from '../CardComponent/CardComponent.module.css';
@@ -10,6 +11,7 @@ import selfIcon from '../../images/icon-self-care.svg';
 import elipsis from '../../images/icon-ellipsis.svg';
 
 function CardComponent({
+	period,
 	color,
 	title,
 	daily,
@@ -19,6 +21,8 @@ function CardComponent({
 	monthly,
 	monthlyPrev
 }) {
+	const [activeItem, setActiveItem] = useState(null);
+
 	const handleIcon = (name) => {
 		switch (name) {
 			case 'Work':
@@ -37,6 +41,13 @@ function CardComponent({
 				return workIcon;
 		}
 	};
+
+	useEffect(() => {
+		const storedActiveItem = localStorage.getItem('period');
+		if (storedActiveItem !== null) {
+			setActiveItem(parseInt(storedActiveItem));
+		}
+	}, []);
 
 	return (
 		<div style={{ backgroundColor: `${color}` }} className={styles.container}>
