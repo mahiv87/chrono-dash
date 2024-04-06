@@ -1,6 +1,6 @@
 .container {
 	width: 15.3rem;
-	border-radius: 0.7rem;
+	border-radius: 0.7rem 0.7rem 1rem 1rem;
 }
 
 .imageContainer {
