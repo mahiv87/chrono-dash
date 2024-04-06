@@ -1,8 +1,5 @@
 .container {
-	/* display: flex;
-	flex-direction: column; */
 	width: 15.3rem;
-	/* background-color: hsl(15, 100%, 70%); */
 	border-radius: 0.7rem;
 }
 
