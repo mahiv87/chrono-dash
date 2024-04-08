@@ -61,6 +61,8 @@ function App() {
 		}
 	}, []);
 
+	console.log(`App.jsx: Timeframe ${activeItem}`);
+
 	return (
 		<div className="container">
 			<div className="mainContainer">
