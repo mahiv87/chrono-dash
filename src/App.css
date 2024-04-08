@@ -21,3 +21,59 @@
 	grid-template-rows: repeat(2, 1fr);
 	gap: 2em 2em;
 }
+
+/* User Info */
+.mainContainer {
+	width: 15.3rem;
+	height: 100%;
+	background-color: hsl(235, 46%, 20%);
+	border-radius: 0.7rem;
+}
+
+.userContainer {
+	background-color: hsl(246, 80%, 60%);
+	border-radius: 0.7rem;
+	padding: 2rem;
+}
+
+.userContainer .avatar {
+	width: 5.75rem;
+	border: 0.25rem solid white;
+	border-radius: 50%;
+}
+
+.userInfo {
+	margin: 2rem 0;
+}
+
+.userInfo p {
+	color: hsl(236, 100%, 87%);
+	margin: 0;
+}
+
+.userInfo .name {
+	font-size: 3rem;
+	color: white;
+}
+
+.periodic {
+	padding: 1rem;
+}
+
+.item {
+	list-style: none;
+	width: 3.125rem;
+	color: hsl(235, 45%, 61%);
+	font-weight: 400;
+	margin: 1rem;
+	cursor: pointer;
+	transition: all 150ms ease-in-out;
+}
+
+.item:hover {
+	color: white;
+}
+
+.active {
+	color: white;
+}
