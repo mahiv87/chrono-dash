@@ -84,6 +84,7 @@
 	.container {
 		display: flex;
 		flex-direction: column;
+		gap: 2em;
 	}
 
 	.mainContainer {
@@ -92,7 +93,7 @@
 
 	.userContainer {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		padding: 1rem 0.2rem 1rem 1rem;
 	}
@@ -109,7 +110,7 @@
 
 	.userInfo .name {
 		font-size: 1.5rem;
-		padding: 0.5rem 0rem;
+		padding: 0rem;
 	}
 
 	.periodic {

@@ -57,3 +57,29 @@
 	color: hsl(236, 100%, 87%);
 	font-weight: 300;
 }
+
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 325px;
+	}
+
+	.imageContainer {
+		height: 2.5rem;
+	}
+
+	.header {
+		padding: 0;
+	}
+
+	.timeContainer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0;
+	}
+
+	.time {
+		font-size: 32px;
+	}
+}
