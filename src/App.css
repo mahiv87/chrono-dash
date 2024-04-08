@@ -29,8 +29,9 @@
 	padding: 2rem;
 }
 
-.userContainer .avatar {
+.avatar {
 	width: 5.75rem;
+	height: 5.75rem;
 	border: 0.25rem solid white;
 	border-radius: 50%;
 }
@@ -84,9 +85,31 @@
 		display: flex;
 		flex-direction: column;
 	}
-}
 
-.cardsContainer {
-	display: flex;
-	flex-direction: column;
+	.userContainer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+	}
+
+	.avatar {
+		width: 3.5rem;
+		height: 3.5rem;
+		border-radius: 50%;
+	}
+
+	.userInfo {
+		margin: 0 1rem;
+	}
+
+	.userInfo .name {
+		font-size: 1rem;
+		padding: 0.5rem 0rem;
+	}
+
+	.cardsContainer {
+		display: flex;
+		flex-direction: column;
+	}
 }
