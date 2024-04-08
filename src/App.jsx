@@ -42,6 +42,7 @@ import './App.css';
 import avatar from './images/image-jeremy.png';
 import data from './db/data.json';
 import CardComponent from './components/CardComponent/CardComponent';
+import FooterComponent from './components/FooterComponent/FooterComponent';
 
 function App() {
 	const [activeItem, setActiveItem] = useState(() => {
@@ -105,6 +106,7 @@ function App() {
 					/>
 				))}
 			</div>
+			<FooterComponent />
 		</div>
 	);
 }
