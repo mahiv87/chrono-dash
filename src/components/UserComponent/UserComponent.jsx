@@ -4,7 +4,7 @@ import styles from '../UserComponent/UserComponent.module.css';
 import avatar from '../../images/image-jeremy.png';
 
 function UserComponent() {
-	const [activeItem, setActiveItem] = useState(null);
+	const [activeItem, setActiveItem] = useState(1);
 
 	const handleClick = (index) => {
 		setActiveItem(index);

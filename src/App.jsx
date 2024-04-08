@@ -1,41 +1,35 @@
 import { useState, useEffect } from 'react';
-
 import './App.css';
 import UserComponent from './components/UserComponent/UserComponent';
 import CardComponent from './components/CardComponent/CardComponent';
 import data from './db/data.json';
 
 function App() {
-	const [activeItem, setActiveItem] = useState(null);
+	const [activeItem, setActiveItem] = useState(1);
 
 	useEffect(() => {
 		const storedActiveItem = localStorage.getItem('period');
 		if (storedActiveItem !== null) {
 			setActiveItem(parseInt(storedActiveItem));
 		}
-	}, [activeItem]);
+	}, []);
 
-	console.log(activeItem);
+	console.log(`App: ${activeItem}`);
+
 	return (
 		<>
 			<div className="container">
-				<UserComponent setActiveItem={setActiveItem} />
+				<UserComponent activeItem={activeItem} setActiveItem={setActiveItem} />
 				<div className="cardsContainer">
-					{data &&
-						data.map((activity) => (
-							<CardComponent
-								periodic={activeItem}
-								color={activity.color}
-								title={activity.title}
-								daily={activity.timeframes.daily.current}
-								dailyPrev={activity.timeframes.daily.previous}
-								weekly={activity.timeframes.weekly.current}
-								weeklyPrev={activity.timeframes.weekly.previous}
-								monthly={activity.timeframes.monthly.current}
-								monthlyPrev={activity.timeframes.monthly.previous}
-								key={activity.title}
-							/>
-						))}
+					{data.map((activity) => (
+						<CardComponent
+							key={activity.title}
+							activePeriod={Object.keys(activity.timeframes)[activeItem]}
+							color={activity.color}
+							title={activity.title}
+							timeframes={activity.timeframes}
+						/>
+					))}
 				</div>
 			</div>
 		</>

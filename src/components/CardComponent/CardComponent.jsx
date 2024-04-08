@@ -9,17 +9,12 @@ import socialIcon from '../../images/icon-social.svg';
 import selfIcon from '../../images/icon-self-care.svg';
 import elipsis from '../../images/icon-ellipsis.svg';
 
-function CardComponent({
-	periodic,
-	color,
-	title,
-	daily,
-	dailyPrev,
-	weekly,
-	weeklyPrev,
-	monthly,
-	monthlyPrev
-}) {
+function CardComponent({ activePeriod, color, title, timeframes }) {
+	const current = timeframes[activePeriod].current;
+	const previous = timeframes[activePeriod].previous;
+
+	console.log(`CardComponent: ${activePeriod}`);
+
 	const handleIcon = (name) => {
 		switch (name) {
 			case 'Work':
@@ -39,32 +34,6 @@ function CardComponent({
 		}
 	};
 
-	const handlePeriod = (period) => {
-		switch (period) {
-			case 0:
-				return daily;
-			case 1:
-				return weekly;
-			case 2:
-				return monthly;
-			default:
-				return weekly;
-		}
-	};
-
-	const handlePrev = (period) => {
-		switch (period) {
-			case 0:
-				return dailyPrev;
-			case 1:
-				return weeklyPrev;
-			case 2:
-				return monthlyPrev;
-			default:
-				return weeklyPrev;
-		}
-	};
-
 	return (
 		<div style={{ backgroundColor: `${color}` }} className={styles.container}>
 			<div className={styles.imageContainer}>
@@ -78,10 +47,8 @@ function CardComponent({
 					</a>
 				</div>
 				<div className={styles.timeContainer}>
-					<p className={styles.time}>{handlePeriod(periodic)}hrs</p>
-					<p className={styles.previous}>
-						Last Week - {handlePrev(periodic)}hrs
-					</p>
+					<p className={styles.time}>{current}hrs</p>
+					<p className={styles.previous}>Last Week - {previous}hrs</p>
 				</div>
 			</div>
 		</div>
@@ -89,15 +56,10 @@ function CardComponent({
 }
 
 CardComponent.propTypes = {
-	periodic: PropTypes.number,
-	color: PropTypes.string.isRequired,
-	title: PropTypes.string.isRequired,
-	daily: PropTypes.number.isRequired,
-	dailyPrev: PropTypes.number.isRequired,
-	weekly: PropTypes.number.isRequired,
-	weeklyPrev: PropTypes.number.isRequired,
-	monthly: PropTypes.number.isRequired,
-	monthlyPrev: PropTypes.number.isRequired
+	activePeriod: PropTypes.oneOf(['daily', 'weekly', 'monthly']),
+	color: PropTypes.string,
+	title: PropTypes.string,
+	timeframes: PropTypes.object
 };
 
 export default CardComponent;
