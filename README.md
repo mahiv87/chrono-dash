@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/chronodash-time-tracking-dashboard-built-with-react-2LzgxYn7CN](https://www.frontendmentor.io/solutions/chronodash-time-tracking-dashboard-built-with-react-2LzgxYn7CN)
 - Live Site URL: [https://mahiv87.github.io/chrono-dash/](https://mahiv87.github.io/chrono-dash/)
 
 ## My process
