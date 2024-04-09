@@ -45,4 +45,4 @@ Users should be able to:
 ## Author
 
 - Website - [Marcus Herrera](https://mahiv87.github.io/hire-marcus/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@mahiv87](https://www.frontendmentor.io/profile/@mahiv87)
